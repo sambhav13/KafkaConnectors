@@ -1,0 +1,22 @@
+{
+  "name":"local-file-source",
+  "config": {
+    "key.converter":"org.apache.kafka.connect.json.JsonConverter",
+    "value.converter":"org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable":"false",
+    "value.converter.schemas.enable":"false",
+    "internal.key.converter":"org.apache.kafka.connect.json.JsonConverter",
+    "internal.value.converter":"org.apache.kafka.connect.json.JsonConverter",
+    "internal.key.converter.schemas.enable":"false",
+    "internal.value.converter.schemas.enable":"false",
+    "offset.flush.interval.ms":"10000",
+    "connector.class":"sftp.MySftpSourceConnector",
+    "tasks.max":"1",
+    "host":"127.0.0.1",
+    "port":"22",
+    "user":"root",
+    "directory":"/root/sftp",
+    "topic":"test"
+
+  }
+}
